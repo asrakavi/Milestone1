@@ -4,6 +4,7 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
+//User class-> In which there are all properties of a User
 @Entity
 public class User {
 
@@ -11,18 +12,21 @@ public class User {
     private String id;
     @Column(unique = true)
     private String userName;
+    //The value of username is need to be unique
     private String firstName;
     private String lastName;
     @Column(unique = true)
     private String mobileNumber;
+    //The value of mobileNumber is need to be unique
     private String emailId;
     private String address1;
     private String address2;
 
-
+//Default constructor
     public User() {
     }
 
+    //A parameterised constructor
     public User(String id, String userName, String firstName, String lastName, String mobileNumber, String emailId, String address1, String address2) {
         this.id = id;
         this.userName = userName;
@@ -34,6 +38,7 @@ public class User {
         this.address2 = address2;
     }
 
+    //Getters and Setters
     public String getId() {
         return id;
     }
