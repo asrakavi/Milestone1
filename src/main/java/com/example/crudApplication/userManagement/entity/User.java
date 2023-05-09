@@ -26,7 +26,7 @@ public class User {
     public User() {
     }
 
-    //A parameterised constructor
+    //parameterised constructor
     public User(String id, String userName, String firstName, String lastName, String mobileNumber, String emailId, String address1, String address2) {
         this.id = id;
         this.userName = userName;

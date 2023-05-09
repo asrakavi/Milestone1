@@ -48,7 +48,7 @@ public class UserService {
         if(!userRepo.existsById(id)){
             throw new NoSuchElementException("User not found");
         }
-        //If user already exits then delete.
+        //If user already exits then delete it.
         userRepo.deleteById(id);
     }
 }

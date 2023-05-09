@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.Optional;
 
-//User repo where all the functionllity are available which are required
+//User repo where all the functionality are available which are required
 @Repository
 public interface UserRepository extends CrudRepository<User,String> {
 
