@@ -1,11 +1,10 @@
 package com.example.crudApplication.userManagement.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 //User class-> In which there are all properties of a User
 @Entity
+@Table
 public class User {
 
     @Id

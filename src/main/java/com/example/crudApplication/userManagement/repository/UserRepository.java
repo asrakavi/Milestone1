@@ -15,9 +15,9 @@ public interface UserRepository extends CrudRepository<User,String> {
 
     //By this function we want to get user by userName, so as we can see the name of the function is the same
     //as we want to get done by function
-    Optional<User> findByUserName(String userName);
+    User findByUserName(String userName);
 
-    Optional<User> findByMobileNumber(String mobileNumber);
+    User findByMobileNumber(String mobileNumber);
 
-    Optional<User> findByEmailId(String emailId);
+    User findByEmailId(String emailId);
 }

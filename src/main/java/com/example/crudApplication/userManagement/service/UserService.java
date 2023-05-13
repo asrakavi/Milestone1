@@ -16,13 +16,13 @@ public class UserService {
     //Creating a user
     public User createUSer(User user) {
 
-        if(userRepo.findByUserName(user.getUserName()).isPresent()){
+        if(userRepo.findByUserName(user.getUserName())!=null){
             throw new IllegalArgumentException("User with same Name already exits");
         }
-        if(userRepo.findByMobileNumber(user.getMobileNumber()).isPresent()){
+        if(userRepo.findByMobileNumber(user.getMobileNumber())!=null){
             throw new IllegalArgumentException("User with same MobileNumber already exits");
         }
-        if(userRepo.findByEmailId(user.getEmailId()).isPresent()){
+        if(userRepo.findByEmailId(user.getEmailId())!=null){
             throw new IllegalArgumentException("User with same EmailId already exits");
         }
         //If user don't already exits then create.
