@@ -55,10 +55,6 @@ public class UserServiceTest {
         assertThat(userService.getUser("1")).isEqualTo(user);
 
 
-//        User user = geTuser();
-//        userRepository.save(user);
-//        userService.getUser("1");
-//        verify(userRepository).findById("1");
 
     }
 
@@ -74,7 +70,6 @@ public class UserServiceTest {
     @Test
     void deleteUser() {
         User user=geTuser();
-        //Mockito.when(userRepository.findById("1")).thenReturn(Optional.ofNullable(user));
         Mockito.when(userRepository.existsById(user.getId())).thenReturn(true);
         //assertFalse(userRepository.existsById(user.getId()));
         assertThat(userService.deleteUser(user.getId())).isTrue();

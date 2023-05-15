@@ -54,7 +54,5 @@ public class UserService {
         return true;
     }
 
-//    public UserService(UserRepository userRepo) {
-//        this.userRepo = userRepo;
-//    }
+
 }
