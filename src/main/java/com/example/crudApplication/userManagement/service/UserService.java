@@ -32,6 +32,7 @@ public class UserService {
     //Reading a user
     public User getUser(String id) {
         return userRepo.findById(id).orElseThrow(()-> new NoSuchElementException("User not found"));
+
     }
 
 ////Updating a user
@@ -44,11 +45,16 @@ public class UserService {
     }
 
     //Deleting a user
-    public void deleteUser(String id) {
+    public boolean deleteUser(String id) {
         if(!userRepo.existsById(id)){
             throw new NoSuchElementException("User not found");
         }
         //If user already exits then delete it.
         userRepo.deleteById(id);
+        return true;
     }
+
+//    public UserService(UserRepository userRepo) {
+//        this.userRepo = userRepo;
+//    }
 }
